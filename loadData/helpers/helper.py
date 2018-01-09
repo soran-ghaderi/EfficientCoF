@@ -11,3 +11,4 @@ class Split:
         trainingSet, testSet = train_test_split(df, test_size=0.2)
         sorted_trainSet = trainingSet.sort_values('user_id')
         sorted_testSet = testSet.sort_values('user_id')
+        return sorted_testSet, sorted_trainSet
