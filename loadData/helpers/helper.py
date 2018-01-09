@@ -16,7 +16,9 @@ class Split:
 class MyPlotter:
     def plot(self, df):
         """
-
+        Plot dataframe distributions:
+            1. Distribution of ratings
+            2. Distribution of ratings count per user
         :return:
         """
         df['item_id'].hist(grid=True)
