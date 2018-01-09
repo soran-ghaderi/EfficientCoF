@@ -12,3 +12,5 @@ class Split:
         sorted_trainSet = trainingSet.sort_values('user_id')
         sorted_testSet = testSet.sort_values('user_id')
         return sorted_testSet, sorted_trainSet
+
+class MyPlotter:
