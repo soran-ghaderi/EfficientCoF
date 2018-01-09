@@ -5,16 +5,19 @@ from model.prediction import prediction as prd
 
 class Predict:
     def predict_new_items(targetU, neighbour, indirNeighbour, item, mlist, list_with_R):
-        '''
+        """
+        Args:
+            neighbour: Direct neighbors of target user
+            indirNeighbour: Indirect neighbors of target user
+            item: Target item to calculate its probability to recommend to the
+                target user
+            mlist:
+            list_with_R: Total dictionary of user-item matrix including rating
+                values
 
-        :param targetU: Target user
-        :param neighbour: Direct neighbors of target user
-        :param indirNeighbour: Indirect neighbors of target user
-        :param item: Target item to calculate its probability to recommend to the target user
-        :param list: Total list of user-item edges
-        :param list_with_R: Total dictionary of user-item matrix including rating values
-        :return: Items which have 4 or more score to be recommended
-        '''
+        Returns:
+            Items which have 4 or more score to be recommended
+        """
         sig1 = 0
         sig2 = 0
         for i in neighbour:
@@ -45,18 +48,23 @@ class Predict:
             return 0
 
     def prediction(trainSet, sublist_reduced_list, sublist, total, total_with_rating):
-        '''
-        This method aims to predict a list of items for each user encompassed in
-        the train set data considering theirsubspaces.
+        """This method aims to predict a list of items for each user encompassed
+        in the train set data considering theirsubspaces.
 
-        :param trainSet: Training set which emcompasses 0.8 of total dataset
-        :param sublist_reduced_list: Reduced list of subspaces (Interesting, NUI, Unintersting)
-        :param sublist: Subspace lists (Interesting, NUI, Uninteresting)
-        :param total: Total list of train set User-Item matrix
-        :param total_with_rating: Total list of train set User-Item matrix including rates between 1 and 5
-        :return: The predicted dictionary for userers. Each user has a list of predicted items which more
         than 4 have been calculated for
-        '''
+
+        Args:
+            sublist_reduced_list: Reduced list of subspaces (Interesting, NUI,
+                Unintersting)
+            sublist: Subspace lists (Interesting, NUI, Uninteresting)
+            total: Total list of train set User-Item matrix
+            total_with_rating: Total list of train set User-Item matrix
+                including rates between 1 and 5
+
+        Returns:
+            The predicted dictionary for userers. Each user has a list of
+            predicted items which more
+        """
         predicted_dictionary = {}
         listOfTestUsers = []
         for user in trainSet.T.iteritems():

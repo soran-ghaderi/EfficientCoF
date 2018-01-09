@@ -3,20 +3,28 @@ from model.helpers import finder as fd
 
 class neighbors:
     def common_elements(list1, list2):
+        """
+        Args:
+            list2:
+        """
         result = []
         for element in list1:
             if element in list2:
-                result.append(element)
-        return result
+        """
+        Args:
+            mlist:
+            interestinga:
 
-    def find_subspace(user, reducedlist, interestingr):
-        '''
+        Returns:
+            The number of common items found with current user's subspace
+        """
+            reducedlist: Reduced list of specified subspace lists( Interesting,
+                NIU, Uninteresting)
+            interestingr: Specified list encompassing rating values
 
-        :param user: Target user to find its subspace
-        :param reducedlist: Reduced list of specified subspace lists( Interesting, NIU, Uninteresting)
-        :param interestingr: Specified list encompassing rating values
-        :return: Related subspace to each user will be returned
-        '''
+        Returns:
+            Related subspace to each user will be returned
+        """
         subspace_dict = {}
         maximum = 0
         listIndex = 0
@@ -37,13 +45,14 @@ class neighbors:
         return listIndex
 
     def level_1and2_neighbours(user, reducedlist, mlist):
-        '''
+        """
+        Args:
+            reducedlist: cluserters of interesting, NIU, uninteresting lists
+            mlist:
 
-        :param user: Current user to find its level 1 and 2 neighbours
-        :param reducedlist: cluserters of interesting, NIU, uninteresting lists
-        :param list: rating list of userers: interesting, NIU, uninteresting
-        :return: level 1 and level 2 neighbours as a dictionary
-        '''
+        Returns:
+            level 1 and level 2 neighbours as a dictionary
+        """
         level1and2N = {}
         nearest_neighbours = fd.Finder.find_nearest_neighbours(user, reducedlist, mlist)
         level1and2N.update({1: nearest_neighbours})
@@ -59,11 +68,10 @@ class neighbors:
         return level1and2N
 
     def extract_neighbours(neighbours_list):
-        '''
-
-        :param neighbours_list: Dictionary of target user's neighbor list
-        :return: Splited level 1 and level 2 neighbors
-        '''
+        """
+        Returns:
+            Splited level 1 and level 2 neighbors
+        """
         list_of_indirect = []
         list_of_direct = neighbours_list[1]
         for miter in list_of_direct:
@@ -78,10 +86,8 @@ class neighbors:
 
 class Constructor:
     def construct_train_lists(msorted):
-        '''
-
-        Objective: Calculating and figuring out cluserters based on " A new method to find neighbor interesting that
-         improves the performance of Collaborative Filtering" paper.
+        """Objective: Calculating and figuring out cluserters based on " A new method to find neighbor interesting that
+            improves the performance of Collaborative Filtering" paper.
 
         Steps done in this function:
             Extracting ratings and devide them into three categories:
@@ -89,8 +95,9 @@ class Constructor:
                 2. NIU (Neither Interesting nor Unintresting)
                 3. Uninteresting
 
-            Calculating cluserters items have in common and remove redundant lists which are subset of others
-        '''
+            Calculating cluserters items have in common and remove redundant
+            lists which are subset of others
+        """
 
         interesting = {}
         NIU = {}
@@ -161,11 +168,10 @@ class Constructor:
         return interesting, interesting_with_rating, NIU, NIU_with_rating, uninteresting, uninteresting_with_rating, total, total_with_rating
 
     def construct_test_list(msorted):
-        '''
-
-        :param sorted: Sorted dataframe of test chunk of data
-        :return: Dictionary of all (user-item)s related to test data
-        '''
+        """
+        Returns:
+            Dictionary of all (user-item)s related to test data
+        """
         total = {}
         total_with_rating = {}
         for row in msorted.T.iteritems():
@@ -185,12 +191,13 @@ class Constructor:
 
 class MyMath:
     def mean_calc(targetUser, rating_list):
-        '''
+        """
+        Args:
+            rating_list: List of rated items of target user
 
-        :param targetUser: The user supposed to find its list's mean
-        :param rating_list: List of rated items of target user
-        :return: Arithmetic mean of the rating_list
-        '''
+        Returns:
+            Arithmetic mean of the rating_list
+        """
         msum = 0
         for item in rating_list[targetUser]:
             # print('interesting',item, rating_list[targetUser][item])

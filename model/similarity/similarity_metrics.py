@@ -4,14 +4,16 @@ from model.helpers import helper as mhl
 
 class Metrics:
     def pearson_sim(TUser, NUser, mlist, list_with_rating):
-        '''
+        """
+        Args:
+            NUser: Direct neighbors of target user
+            mlist:
+            list_with_rating: Total dictionary of user-item matrix including
+                rating values
 
-        :param TUser: Target user
-        :param NUser: Direct neighbors of target user
-        :param list: Total list of user-item edges
-        :param list_with_rating: Total dictionary of user-item matrix including rating values
-        :return: Pearson similarity of target user and its neighbor user
-        '''
+        Returns:
+            Pearson similarity of target user and its neighbor user
+        """
         currentusererlist = mlist[TUser]
         neighbourusererlist = mlist[NUser]
         common_list = []
@@ -52,14 +54,17 @@ class Metrics:
             #     return 0
 
     def new_sim(TUser, NUser, mlist, list_with_rating):
-        '''
+        """
+        Args:
+            NUser: Direct neighbors of target user
+            mlist:
+            list_with_rating: Total dictionary of user-item matrix including
+                rating values
 
-        :param TUser: Target user
-        :param NUser: Direct neighbors of target user
-        :param list: Total list of user-item edges
-        :param list_with_rating: Total dictionary of user-item matrix including rating values
-        :return: Proposed similarity of this paper between target user and its neighbor user
-        '''
+        Returns:
+            Proposed similarity of this paper between target user and its
+            neighbor user
+        """
         try:
             currentusererlist = mlist[TUser]
             neighbourusererlist = mlist[NUser]

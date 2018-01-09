@@ -1,17 +1,18 @@
 
 class Evaluate:
     def evaluate_prediction(predicted_dictionary, total_test):
-        '''
+        """Precision and recall are then defined as:
+            Precision: TP / TP + FP Recall: TP / TP + FN F1_measure: (precision
+            * recall) / (precision + recall)
 
-        :param predicted_dictionary: Dictionary of predicted items for all users
-        :param total_test: Total list of test data of users
-        :return: Recall, preceision, f1_measure of the presented model
-        Precision and recall are then defined as:
-            Precision:  TP / TP + FP
-            Recall:     TP / TP + FN
-            F1_measure: (precision * recall) / (precision + recall)
-                    or  (2*TP) / 2*TP + FP + FN
-        '''
+                or (2*TP) / 2*TP + FP + FN
+
+        Args:
+            total_test: Total list of test data of users
+
+        Returns:
+            Recall, preceision, f1_measure of the presented model
+        """
         tp = 0
         fp = 0
         fn = 0

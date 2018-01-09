@@ -3,12 +3,10 @@ from model.helpers import helper as mhl
 
 class ReducedListGenerator:
     def generate_reduced(list_to_be_reduced):
-        '''
-
-        :param list_to_be_reduced: Every subspace of each global table that was created in the previous step may be a
-        subset of a greater subspace, so this willlead to great redundancy. Therefore,the redundancy should be removed.
-        :return: Reduced subspace returned
-        '''
+        """subset of a greater subspace, so this willlead to great redundancy.
+        Therefore,the redundancy should be removed. :return: Reduced subspace
+        returned
+        """
         reducedlist = []
         listOfWords = []
         listoflists = []
