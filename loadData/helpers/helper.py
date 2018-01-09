@@ -14,3 +14,8 @@ class Split:
         return sorted_testSet, sorted_trainSet
 
 class MyPlotter:
+    def plot(df):
+        """
+
+        :return:
+        """
