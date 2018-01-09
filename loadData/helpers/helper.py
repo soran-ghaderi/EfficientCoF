@@ -14,8 +14,16 @@ class Split:
         return sorted_testSet, sorted_trainSet
 
 class MyPlotter:
-    def plot(df):
+    def plot(self, df):
         """
 
         :return:
         """
+        df['item_id'].hist(grid=True)
+        plt.xlabel('Items')
+        plt.ylabel('Frequency')
+        plt.title('Distribution of ratings')
+        plt.show()
+        plt.xlabel('Number of ratings per user')
+        plt.ylabel('Frequency')
+        plt.title('Distribution of ratings count per user')
