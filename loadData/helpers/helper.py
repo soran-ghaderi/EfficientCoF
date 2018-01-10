@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 class Split:
     def split(self, df):
         """
-
-        :param df:
-        :return:
+        Split and sort train/test sets
+        :param df: Dataframe containing training data
+        :return: Sorted-test-set/Sorted-train-set dictionaries
         """
         trainingSet, testSet = train_test_split(df, test_size=0.2)
         sorted_trainSet = trainingSet.sort_values('user_id')
