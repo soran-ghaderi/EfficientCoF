@@ -9,10 +9,10 @@ class Split:
         :param df: Dataframe containing training data
         :return: Sorted-test-set/Sorted-train-set dictionaries
         """
-        trainingSet, testSet = train_test_split(df, test_size=0.2)
-        sorted_trainSet = trainingSet.sort_values('user_id')
-        sorted_testSet = testSet.sort_values('user_id')
-        return sorted_testSet, sorted_trainSet
+        training_set, test_set = train_test_split(df, test_size=0.2)
+        sorted_trainSet = training_set.sort_values('user_id')
+        sorted_test_set = test_set.sort_values('user_id')
+        return sorted_test_set, sorted_trainSet
 
 
 class MyPlotter:
