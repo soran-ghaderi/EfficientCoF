@@ -15,7 +15,7 @@ class Split:
         return sorted_test_set, sorted_train_set
 
 
-class MyPlotter:
+class Plot:
     def plot(self, dataframe):
         """
         Plot dataframe distributions:
