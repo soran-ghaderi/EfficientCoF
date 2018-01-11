@@ -13,3 +13,4 @@ class LoadData:
         print(df['rating'].describe())
         # hl.MyPlotter.plot(df)
         sorted_testSet, sorted_trainSet = hl.Split.split(df)
+        return sorted_trainSet, sorted_testSet
