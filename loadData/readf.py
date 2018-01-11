@@ -6,7 +6,7 @@ class LoadData:
     def readf(self, path):
         """
 
-        :return:
+        :return: Sorted-test-set/Sorted-train-set dictionaries
         """
         df = pd.read_csv(path, '\t')
         df.drop('timestamp', axis=1, inplace=True)
