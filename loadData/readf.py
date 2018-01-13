@@ -9,9 +9,9 @@ class LoadData:
         :param path: Path to the csv file
         :return: Sorted-test-set/Sorted-train-set dictionaries
         """
-        df = pd.read_csv(path, '\t')
-        df.drop('timestamp', axis=1, inplace=True)
-        print(df['rating'].describe())
-        # hl.MyPlotter.plot(df)
-        sorted_testSet, sorted_trainSet = hl.Split.split(df)
+        dataframe = pd.read_csv(path, '\t')
+        dataframe.drop('timestamp', axis=1, inplace=True)
+        print(dataframe['rating'].describe())
+        # hl.MyPlotter.plot(dataframe)
+        sorted_testSet, sorted_trainSet = hl.Split.split(dataframe)
         return sorted_trainSet, sorted_testSet
