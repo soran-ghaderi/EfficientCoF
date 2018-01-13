@@ -13,5 +13,5 @@ class LoadData:
         dataframe.drop('timestamp', axis=1, inplace=True)
         print(dataframe['rating'].describe())
         # hl.MyPlotter.plot(dataframe)
-        sorted_testSet, sorted_trainSet = hl.Split.split(dataframe)
-        return sorted_trainSet, sorted_testSet
+        sorted_test_set, sorted_trainSet = hl.Split.split(dataframe)
+        return sorted_trainSet, sorted_test_set
