@@ -6,7 +6,7 @@ class LoadData:
     def readf(self, path):
         """
         Import data from the csv file and drop ir-related columns.
-        :param path:
+        :param path: Path to the csv file
         :return: Sorted-test-set/Sorted-train-set dictionaries
         """
         df = pd.read_csv(path, '\t')
