@@ -1,9 +1,12 @@
 # NUSCCF
 A new method to find neighbor users that improves the performance of Collaborative Filtering
-This was implemented as B.Sc's final thesis written in python. A good level of modularity is considered whilst coding; same as previous, mostly anarchitecture has been defined in order to keep simplicity and avoid any confusion.
-Soran Ghadri summer
+This was implemented as B.Sc's final thesis written in python. A good level of modularity is considered whilst coding; same as previous, mostly an architecture has been defined in order to keep simplicity and avoid any confusion.
+Soran Ghadri summer 2018
 
+### Documentation and paper will be uploaded subsequently.
+### How to use codes will be upload subsequently.
 
+## Cite
 Hamidreza Koohi, Kourosh Kiani,
 Expert Systems with Applications,
 Volume 83,
