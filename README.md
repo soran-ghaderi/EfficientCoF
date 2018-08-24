@@ -3,7 +3,7 @@ A new method to find neighbor users that improves the performance of Collaborati
 This was implemented as B.Sc's final thesis written in python. A good level of modularity is considered whilst coding; same as previous, mostly an architecture has been defined in order to keep simplicity and avoid any confusion.
 Soran Ghadri summer 2018
 
-### Documentation and paper will be uploaded subsequently.
+### Documentation will be uploaded subsequently.
 ### How to use codes will be upload subsequently.
 
 ## Cite
