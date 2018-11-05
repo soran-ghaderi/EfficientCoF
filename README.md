@@ -1,7 +1,7 @@
 # NUSCCF
-A new method to find neighbor users that improves the performance of Collaborative Filtering.
+An new eficient subspace based method to improve Collaborative Filtering  
 
-This was implemented as B.Sc's final thesis written in python. A good level of modularity is considered whilst coding; same as previous, mostly an architecture has been defined in order to keep simplicity and avoid any confusion.
+This was implemented as B.Sc's final thesis written in python. A good level of modularity is considered while coding; same as previous, mostly an architecture has been defined in order to keep simplicity and avoid any confusion.
 
 Soran Ghadri summer 2018
 
@@ -9,17 +9,7 @@ Soran Ghadri summer 2018
 ### How to use codes will be upload subsequently.
 
 ## Abstract
-Recommender Systems (RS) are used to help people reduce the amount of time they spend to find the items they are looking for. One of the most successful techniques used in RS is called Collaborative Filtering (CF). It looks into the choices made by other users to find items that are most similar to the target user. Data sparsity and high dimensionality which are common in the RS domains have negatively affected the efficiency of CF. The current paper seeks to solve the mentioned problems through a neighbor user finding method which has been derived from the subspace clustering approach. In this method, the authors extract different subspaces of rated items under the categories of Interested, Neither Interested Nor Uninterested, and Uninterested. Based on subspaces, tree structures of neighbor users are drawn for the target user. Furthermore, a new similarity method is proposed to compute the similarity value. This new method has been tested via the Movielens 100K, Movielens 1M and Jester datasets in order to make a comparison with the traditional techniques. The results have indicated that the proposed method can enhance the performance of the Recommender Systems.
+In order to reduce the amount of time that people are spending to find their needed items, Recommender Systems quite helpful.
+Collaborative filtering is one of the most popular techniques being used to find customer's related items. It finds the most similar users to the target user based on the target user's activities. High dimensionality and data sparsity are two common problems which affect its performance negatively. The proposed method solves these problems in an efficient way which has been derived from K-Means and Subspace clustering approaches. In the suggested way, firstly users will be clustered into different clusters and then three subspaces will be extracted based on ratings of users namely Interested, Neither Interested Nor Uninterested, and Uninterested. With respect to subspaces, three tree will be constructed for target user. Furthermore, the first and second neighbors will be considered to calculate their similarities based on Pearson similarity. The Movielens 100k dataset has been used to train and test the Proposed technique. The results have illustrated that this technique can dramaticlly improve the performance of the collaborative filtering.
 ## Keywords
-### Recommender System; Collaborative Filtering; Sparsity; High dimensionality; Subspace clustering; Neighbor users
-
-## Cite
-Hamidreza Koohi, Kourosh Kiani,
-A new method to find neighbor users that improves the performance of Collaborative Filtering,
-Expert Systems with Applications,
-Volume 83,
-2017,
-Pages 30-39,
-ISSN 0957-4174,
-https://doi.org/10.1016/j.eswa.2017.04.027.
-(http://www.sciencedirect.com/science/article/pii/S0957417417302713)
+### Collaborative Filtering; Sparsity; High dimensionality; Subspace clustering; K-Means clustering
