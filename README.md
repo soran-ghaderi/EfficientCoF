@@ -1,5 +1,5 @@
 # NUSCCF
-An new eficient subspace based method to improve Collaborative Filtering  
+A new efficient subspace based method to improve Collaborative Filtering  
 
 This was implemented as B.Sc's final thesis written in python. A good level of modularity is considered while coding; same as previous, mostly an architecture has been defined in order to keep simplicity and avoid any confusion.
 
