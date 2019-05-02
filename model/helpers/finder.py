@@ -5,7 +5,7 @@ from model.helpers import helper as mhl
 
 class Finder:
 
-    def find_commons_in_one_list(user, list, interestinga):
+    def find_commons_in_one_list(user, mlist, interestinga):
         '''
 
         :param user: Neighbour user to find common items with current user's subspace
@@ -15,7 +15,7 @@ class Finder:
         count = 0
         try:
             for j in range(interestinga[user].__len__()):
-                if interestinga[user][j] in list:
+                if interestinga[user][j] in mlist:
                     count += 1
         except:
             print('passed')
@@ -36,7 +36,7 @@ class Finder:
         dicOfsortedNearests = {}
         listIndex = mhl.neighbors.find_subspace(user, reducedlist, listOfUsers)
         subspacelist = reducedlist[listIndex]
-        max = 0
+        maximum = 0
         nearuserer = 0
         for i in (listOfUsers):
             if not i == user:
@@ -45,14 +45,14 @@ class Finder:
                 dicOfsortedNearests.update({i: niegbourmax})
                 dtf = pd.DataFrame(list(dicOfsortedNearests.items()), columns=['user', 'num'])
                 so = dtf.sort_values('num', ascending=False)
-                if niegbourmax > max:
-                    max = niegbourmax
+                if niegbourmax > maximum:
+                    maximum = niegbourmax
                     nearuserer = i
         # print(nearuserer, max, subspacelist)
         # print(so)
         for row in range(so.__len__()):
             # if row.loc[1]== max:
-            if so.iloc[row]['num'] == max:
+            if so.iloc[row]['num'] == maximum:
                 # print(so.ilocrow)
                 nearestuserers.append(so.iloc[row]['user'])
 
