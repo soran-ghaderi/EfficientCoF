@@ -4,7 +4,7 @@ from model.prediction import prediction as prd
 
 
 class Predict:
-    def predict_new_items(targetU, neighbour, indirNeighbour, item, list, list_with_R):
+    def predict_new_items(targetU, neighbour, indirNeighbour, item, mlist, list_with_R):
         '''
 
         :param targetU: Target user
@@ -21,20 +21,20 @@ class Predict:
             try:
                 # print('prediction: rate and mean:', list_with_R[i][item], mhl.MyMath.mean_calc(i, list_with_R))
                 # print('similarity:', pearson_sim(targetU, i, list, list_with_R))
-                sig1 += (sm.Metrics.pearson_sim(targetU, i, list, list_with_R)) * (
+                sig1 += (sm.Metrics.pearson_sim(targetU, i, mlist, list_with_R)) * (
                 list_with_R[i][item] - mhl.MyMath.mean_calc(i, list_with_R))
             except:
                 pass
 
-            sig2 += sm.Metrics.pearson_sim(targetU, i, list, list_with_R)
+            sig2 += sm.Metrics.pearson_sim(targetU, i, mlist, list_with_R)
 
         for j in indirNeighbour:
             try:
-                sig1 += (sm.Metrics.new_sim(targetU, j, list, list_with_R)) * (
+                sig1 += (sm.Metrics.new_sim(targetU, j, mlist, list_with_R)) * (
                 list_with_R[j][item] - mhl.MyMath.mean_calc(i, list_with_R))
             except:
                 pass
-            sig2 += sm.Metrics.new_sim(targetU, j, list, list_with_R)
+            sig2 += sm.Metrics.new_sim(targetU, j, mlist, list_with_R)
 
         if not sig2 == 0:
             result = (mhl.MyMath.mean_calc(targetU, list_with_R)) + (sig1 / sig2)
