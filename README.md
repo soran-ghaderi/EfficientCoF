@@ -1,4 +1,7 @@
 # NUSCCF
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/79d97dfc9b3d48d991734a42af4ddcc6)](https://app.codacy.com/app/aiengineer/NUSCCF?utm_source=github.com&utm_medium=referral&utm_content=aiengineer/NUSCCF&utm_campaign=Badge_Grade_Dashboard)
+
 A new efficient subspace and K-means clustering based method to improve Collaborative Filtering  
 
 This was implemented as B.Sc's final thesis written in python. A good level of modularity is considered while coding; same as previous, mostly an architecture has been defined in order to keep simplicity and avoid any confusion.
