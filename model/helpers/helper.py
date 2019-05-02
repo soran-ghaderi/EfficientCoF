@@ -18,7 +18,7 @@ class neighbors:
         :return: Related subspace to each user will be returned
         '''
         subspace_dict = {}
-        max = 0
+        maximum = 0
         listIndex = 0
         for s in range(reducedlist.__len__()):
             count = 0
@@ -27,16 +27,16 @@ class neighbors:
                     count += 1
                     # print(item,s,count)
 
-            if count > max:
-                max = count
+            if count > maximum:
+                maximum = count
                 listIndex = s
 
         subspace_dict.update({user: {}})
-        subspace_dict[user].update({listIndex: max})
+        subspace_dict[user].update({listIndex: maximum})
 
         return listIndex
 
-    def level_1and2_neighbours(user, reducedlist, list):
+    def level_1and2_neighbours(user, reducedlist, mlist):
         '''
 
         :param user: Current user to find its level 1 and 2 neighbours
@@ -45,14 +45,14 @@ class neighbors:
         :return: level 1 and level 2 neighbours as a dictionary
         '''
         level1and2N = {}
-        nearest_neighbours = fd.Finder.find_nearest_neighbours(user, reducedlist, list)
+        nearest_neighbours = fd.Finder.find_nearest_neighbours(user, reducedlist, mlist)
         level1and2N.update({1: nearest_neighbours})
         for nearest in nearest_neighbours:
-            if not fd.Finder.find_nearest_neighbours(nearest, reducedlist, list) in level1and2N[1]:
+            if not fd.Finder.find_nearest_neighbours(nearest, reducedlist, mlist) in level1and2N[1]:
                 if level1and2N.keys().__contains__(2):
-                    level1and2N[2].update({nearest: fd.Finder.find_nearest_neighbours(nearest, reducedlist, list)})
+                    level1and2N[2].update({nearest: fd.Finder.find_nearest_neighbours(nearest, reducedlist, mlist)})
                 else:
-                    level1and2N.update({2: {nearest: fd.Finder.find_nearest_neighbours(nearest, reducedlist, list)}})
+                    level1and2N.update({2: {nearest: fd.Finder.find_nearest_neighbours(nearest, reducedlist, mlist)}})
         # print('Neibours:', level1and2N)
         # print('reduced list', reducedlist)
         # print('list', list)
@@ -66,9 +66,9 @@ class neighbors:
         '''
         list_of_indirect = []
         list_of_direct = neighbours_list[1]
-        for iter in list_of_direct:
+        for miter in list_of_direct:
             try:
-                for sec in neighbours_list[2][iter]:
+                for sec in neighbours_list[2][miter]:
                     if not ((sec in list_of_direct) or (sec in list_of_indirect)):
                         list_of_indirect.append(sec)
             except:
@@ -77,7 +77,7 @@ class neighbors:
 
 
 class Constructor:
-    def construct_train_lists(sorted):
+    def construct_train_lists(msorted):
         '''
 
         Objective: Calculating and figuring out cluserters based on " A new method to find neighbor interesting that
@@ -101,7 +101,7 @@ class Constructor:
         uninteresting_with_rating = {}
         total_with_rating = {}
 
-        for row in sorted.T.iteritems():
+        for row in msorted.T.iteritems():
             if (row[1][2]) > 3:
                 # print(row)
                 if interesting.get(row[1][0], 'n') == 'n':
@@ -160,7 +160,7 @@ class Constructor:
 
         return interesting, interesting_with_rating, NIU, NIU_with_rating, uninteresting, uninteresting_with_rating, total, total_with_rating
 
-    def construct_test_list(sorted):
+    def construct_test_list(msorted):
         '''
 
         :param sorted: Sorted dataframe of test chunk of data
@@ -168,7 +168,7 @@ class Constructor:
         '''
         total = {}
         total_with_rating = {}
-        for row in sorted.T.iteritems():
+        for row in msorted.T.iteritems():
             if total.get(row[1][0], 'n') == 'n':
                 total.update({row[1][0]: []})
                 total[row[1][0]].append(row[1][1])
@@ -191,9 +191,9 @@ class MyMath:
         :param rating_list: List of rated items of target user
         :return: Arithmetic mean of the rating_list
         '''
-        sum = 0
+        msum = 0
         for item in rating_list[targetUser]:
             # print('interesting',item, rating_list[targetUser][item])
-            sum += rating_list[targetUser][item]
-        # print('mean:',float(sum/(rating_list[targetUser].__len__())))
-        return float(sum / (rating_list[targetUser].__len__()))
+            msum += rating_list[targetUser][item]
+        # print('mean:',float(msum/(rating_list[targetUser].__len__())))
+        return float(msum / (rating_list[targetUser].__len__()))
