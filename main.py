@@ -5,7 +5,7 @@ from model.generators import reduced_subspace_generator as gn
 from model.helpers import helper as mhl
 from model.prediction import prediction as prd
 from math import sqrt
-from sklearn.metrics import accuracy_score, recall_score, 
+from sklearn.metrics import accuracy_score, recall_score
 
 def main():
     path = './dataset/u.data'
