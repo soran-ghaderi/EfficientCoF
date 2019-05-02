@@ -5,8 +5,8 @@ This was implemented as B.Sc's final thesis written in python. A good level of m
 
 Soran Ghadri summer 2018
 
-### Documentation will be uploaded subsequently.
-### How to use codes will be upload subsequently.
+### Documentation will be uploaded subsequently
+### How to use codes will be upload subsequently
 
 ## Abstract
 In order to reduce the amount of time that people are spending to find their needed items, Recommender Systems are quite helpful.
