@@ -14,7 +14,6 @@ class Evaluate:
         '''
         tp = 0
         fp = 0
-        tn = 0
         fn = 0
         for user in predicted_dictionary:
             print(predicted_dictionary[user])
