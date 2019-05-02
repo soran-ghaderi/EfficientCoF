@@ -1,6 +1,5 @@
 language: python
 
-install:
-  dependencies
+install dependencies
 
 run tests
