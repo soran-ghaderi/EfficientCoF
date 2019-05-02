@@ -1,5 +1,8 @@
 language: python
 
-install dependencies
+install: 
+  sklearn
+  pandas
+  matplotlib
 
-run tests
+run: main.py
