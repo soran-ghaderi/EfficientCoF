@@ -45,7 +45,7 @@ class ReducedListGenerator:
                                 toberemoved.append(j)
                                 # print(j)
 
-        ''' Extract main collection of items'''
+        # Extract main collection of items
         for i in range(listoflists.__len__()):
             if not i in toberemoved:
                 reducedlist.append(listoflists[i])

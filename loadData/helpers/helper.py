@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 
 class Split:
 
-
     def split(df):
         '''
 
@@ -28,10 +27,6 @@ class MyPlotter:
         plt.ylabel('Frequency')
         plt.title('Distribution of ratings')
         plt.show()
-
-        # df = pd.DataFrame(R).replace('0', np.nan).count(axis=1)  # count number of ratings per user
-        binwidth = 10
-        # df.hist(bins=np.arange(min(df), max(df) + binwidth, binwidth))
         plt.xlabel('Number of ratings per user')
         plt.ylabel('Frequency')
         plt.title('Distribution of ratings count per user')

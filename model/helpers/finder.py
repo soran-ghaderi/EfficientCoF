@@ -48,7 +48,7 @@ class Finder:
                 if niegbourmax > maximum:
                     maximum = niegbourmax
                     nearuserer = i
-        # print(nearuserer, max, subspacelist)
+        print(nearuserer, max, subspacelist)
         # print(so)
         for row in range(so.__len__()):
             # if row.loc[1]== max:
