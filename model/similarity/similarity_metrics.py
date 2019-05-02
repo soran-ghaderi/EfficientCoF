@@ -3,7 +3,7 @@ from model.helpers import helper as mhl
 
 
 class Metrics:
-    def pearson_sim(TUser, NUser, list, list_with_rating):
+    def pearson_sim(TUser, NUser, mlist, list_with_rating):
         '''
 
         :param TUser: Target user
@@ -12,8 +12,8 @@ class Metrics:
         :param list_with_rating: Total dictionary of user-item matrix including rating values
         :return: Pearson similarity of target user and its neighbor user
         '''
-        currentusererlist = list[TUser]
-        neighbourusererlist = list[NUser]
+        currentusererlist = mlist[TUser]
+        neighbourusererlist = mlist[NUser]
         common_list = []
         commons_count = 0
         s1 = 0
@@ -51,7 +51,7 @@ class Metrics:
             #     print('divided by zero', s2, s3)
             #     return 0
 
-    def new_sim(TUser, NUser, list, list_with_rating):
+    def new_sim(TUser, NUser, mlist, list_with_rating):
         '''
 
         :param TUser: Target user
@@ -61,8 +61,8 @@ class Metrics:
         :return: Proposed similarity of this paper between target user and its neighbor user
         '''
         try:
-            currentusererlist = list[TUser]
-            neighbourusererlist = list[NUser]
+            currentusererlist = mlist[TUser]
+            neighbourusererlist = mlist[NUser]
             common_list = []
             commons_count = 0
             if currentusererlist.__len__() < neighbourusererlist.__len__():
@@ -98,12 +98,12 @@ class Metrics:
             # print("is\t\t|", n1 / n2, '|')
             result = n1 / n2
             if result > 5 or result < 0:
-                Metrics.pearson_sim(TUser, NUser, list, list_with_rating)
+                Metrics.pearson_sim(TUser, NUser, mlist, list_with_rating)
             else:
                 return result
         except:
             try:
-                return Metrics.pearson_sim(TUser, NUser, list, list_with_rating)
+                return Metrics.pearson_sim(TUser, NUser, mlist, list_with_rating)
             except:
                 print('divided by zero', n2)
                 return 0
