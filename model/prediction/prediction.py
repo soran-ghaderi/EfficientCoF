@@ -84,7 +84,7 @@ class Predict:
                     print("predictions finished.\n\n\n")
                     print('|' * 80)
                 except:
-                    pass
+                    print('passed')
 
             predicted_dictionary.update({user[1][0]: y_pred})
 
