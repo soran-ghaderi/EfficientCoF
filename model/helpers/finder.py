@@ -18,7 +18,7 @@ class Finder:
                 if interestinga[user][j] in list:
                     count += 1
         except:
-            pass
+            print('passed')
         return count
 
     def find_nearest_neighbours(user, reducedlist, listOfUsers):
