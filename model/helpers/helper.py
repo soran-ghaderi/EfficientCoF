@@ -72,7 +72,7 @@ class neighbors:
                     if not ((sec in list_of_direct) or (sec in list_of_indirect)):
                         list_of_indirect.append(sec)
             except:
-                pass
+                print('passed')
         return list_of_direct, list_of_indirect
 
 
