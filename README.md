@@ -1,4 +1,7 @@
 # NUSCCF
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/79d97dfc9b3d48d991734a42af4ddcc6)](https://app.codacy.com/app/aiengineer/NUSCCF?utm_source=github.com&utm_medium=referral&utm_content=aiengineer/NUSCCF&utm_campaign=Badge_Grade_Dashboard)
+
 A new efficient subspace and K-means clustering based method to improve Collaborative Filtering  
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/dc5b3819676a43dfb3c87fc934ab9aac)](https://www.codacy.com/app/aiengineer/NUSCCF?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=aiengineer/NUSCCF&amp;utm_campaign=Badge_Grade)
