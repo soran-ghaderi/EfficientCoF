@@ -1,7 +1,7 @@
 # NUSCCF
 A new efficient subspace and K-means clustering based method to improve Collaborative Filtering  
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dc5b3819676a43dfb3c87fc934ab9aac)](https://www.codacy.com/app/aiengineer/NUSCCF?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=aiengineer/NUSCCF&amp;utm_campaign=Badge_Grade) [![HitCount](http://hits.dwyl.io/soran-ghadri/NUSCCF.svg)](http://hits.dwyl.io/soran-ghadri/NUSCCF)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dc5b3819676a43dfb3c87fc934ab9aac)](https://www.codacy.com/app/aiengineer/NUSCCF?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=aiengineer/NUSCCF&amp;utm_campaign=Badge_Grade) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/f92ddecf1d3f4bce9c94c1b6d7d08435)](https://www.codacy.com/manual/aiengineer/smartphoneCalibration?utm_source=github.com&utm_medium=referral&utm_content=soran-ghadri/smartphoneCalibration&utm_campaign=Badge_Coverage) [![HitCount](http://hits.dwyl.io/soran-ghadri/NUSCCF.svg)](http://hits.dwyl.io/soran-ghadri/NUSCCF)
 
 This was implemented as B.Sc's final thesis written in python. A good level of modularity is considered while coding; same as previous, mostly an architecture has been defined in order to keep simplicity and avoid any confusion.
 
