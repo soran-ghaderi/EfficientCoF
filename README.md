@@ -1,6 +1,8 @@
 # NUSCCF
 <h3> A new efficient subspace and K-means clustering based method to improve Collaborative Filtering </h3> 
 
+:star: Low level implementation
+
 | Code quality | Code coverage | Number of hits |
 | --- | --- | --- |
 | [![Codacy Badge](https://api.codacy.com/project/badge/Grade/dc5b3819676a43dfb3c87fc934ab9aac)](https://www.codacy.com/app/aiengineer/NUSCCF?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=aiengineer/NUSCCF&amp;utm_campaign=Badge_Grade) | [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/f92ddecf1d3f4bce9c94c1b6d7d08435)](https://www.codacy.com/manual/aiengineer/smartphoneCalibration?utm_source=github.com&utm_medium=referral&utm_content=soran-ghadri/smartphoneCalibration&utm_campaign=Badge_Coverage) | [![HitCount](http://hits.dwyl.io/soran-ghadri/NUSCCF.svg)](http://hits.dwyl.io/soran-ghadri/NUSCCF) |
