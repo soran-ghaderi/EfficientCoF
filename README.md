@@ -25,4 +25,4 @@ Collaborative filtering is one of the most popular techniques being used to find
 DOI: <https://doi.org/10.1016/j.eswa.2017.04.027> 
 > This code is improved version of the original paper
 
-Please :star: this repo and share it with others
+:star: this repo and share
