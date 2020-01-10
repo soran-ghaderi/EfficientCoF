@@ -2,7 +2,7 @@
 <h3> A new efficient subspace and K-means clustering based method to improve Collaborative Filtering </h3> 
 
 
-## <p align="center"> Architecture of **NUSCCF** </p>
+#### <p align="center"> Architecture of **NUSCCF** </p>
 </br>
 <p align="center">
   <img src="https://github.com/soran-ghadri/NUSCCF/blob/master/figures/Untitled%20Diagram.png">
